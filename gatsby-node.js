@@ -1,7 +1,11 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const ignoredPages = ['/Home/'];
 
-// You can delete this file if you're not using it
+exports.onCreatePage = ({ page, actions }) => {
+    const { deletePage } = actions;
+
+    // remove the HomePage otherwise we would end up with 2 HomePages
+    // one for Home.jsx and another one for index.js
+    if (ignoredPages.includes(page.path)) {
+        deletePage(page);
+    }
+};

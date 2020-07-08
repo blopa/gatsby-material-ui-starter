@@ -1,48 +1,8 @@
-/* eslint-disable react/jsx-filename-extension */
-import React, { useContext } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Switch, Typography } from '@material-ui/core';
-import SEO from '../components/SEO';
-import Layout from '../components/Layout';
-import { CustomThemeContext } from '../themes/CustomThemeProvider';
+// This file only exists as a entry point for Gatsby
+// Since we're writting jsx and using airbnb ESLint rules
+// We should not write jsx into a .js file
+import React from 'react';
+import HomePage from './Home';
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        width: '100%',
-        backgroundColor: theme.palette.background.paper,
-    },
-    nested: {
-        paddingLeft: theme.spacing(4),
-    },
-}));
-
-const IndexPage = (props) => {
-    const classes = useStyles();
-    const { currentTheme, setTheme } = useContext(CustomThemeContext);
-    const handleThemeChange = (event) => {
-        const { checked } = event.target;
-        if (checked) {
-            setTheme('dark');
-        } else {
-            setTheme('normal');
-        }
-    };
-
-    return (
-        <Layout>
-            <SEO title="Home" />
-            <Switch
-                checked={Boolean(currentTheme === 'dark')}
-                onChange={handleThemeChange}
-            />
-            <Typography
-                color="primary"
-                variant="overline"
-            >
-                Hello World
-            </Typography>
-        </Layout>
-    );
-};
-
-export default IndexPage;
+const gatsbyEntryPoint = () => (React.createElement(HomePage));
+export default gatsbyEntryPoint;
