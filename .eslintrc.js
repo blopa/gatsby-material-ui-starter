@@ -208,7 +208,6 @@ module.exports = {
                 max: 1,
             },
         ],
-        'multiline-comment-style': 'warn',
         'multiline-ternary': [
             'warn',
             'always-multiline',
