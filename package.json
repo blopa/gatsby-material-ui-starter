@@ -50,7 +50,7 @@
         "gatsby-remark-responsive-iframe": "^2.4.12",
         "gatsby-remark-smartypants": "^2.3.10",
         "gatsby-source-filesystem": "^2.3.27",
-        "gatsby-transformer-remark": "^2.8.31",
+        "gatsby-transformer-remark": "^5.25.1",
         "gatsby-transformer-sharp": "^2.5.13",
         "npm-check-updates": "^7.1.1",
         "prismjs": "^1.21.0",
